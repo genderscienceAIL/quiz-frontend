@@ -6,7 +6,7 @@ import { Question, Answers } from "../components"
 const useStyles = makeStyles({
   container: {
     maxWidth: "630px",
-    padding: "16px",
+    padding: "4px",
     borderRadius: "5px",
     backgroundColor: "#2a9d8f",
   },
@@ -27,12 +27,14 @@ const QuizLayout = () => {
   return (
     <Grid container spacing={3} className={classes.container}>
       <Grid container item>
-        <Question></Question>
+        <Question />
       </Grid>
       <Grid container item spacing={3}>
-        <Answers></Answers>
+        <Answers />
       </Grid>
-      <Button className={classes.button}>Next</Button>
+      <Grid container item justify="flex-end" >
+        <Button className={classes.button}>Next</Button>
+      </Grid>
     </Grid>
   )
 }
