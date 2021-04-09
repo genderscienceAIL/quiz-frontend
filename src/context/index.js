@@ -1,7 +1,7 @@
-import { QuestionProvider, useQuestionState, useQuestionDispatch } from './questionContext'
-
-export {
+import {
   QuestionProvider,
   useQuestionState,
   useQuestionDispatch,
-};
+} from './questionContext'
+
+export { QuestionProvider, useQuestionState, useQuestionDispatch }

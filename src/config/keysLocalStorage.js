@@ -1,5 +1,5 @@
 const key = {
-  token: 'token'
+  token: 'token',
 }
 
 export default key

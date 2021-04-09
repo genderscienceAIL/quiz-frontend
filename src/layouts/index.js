@@ -1,3 +1,3 @@
 import QuizLayout from './QuizLayout'
 
-export {QuizLayout}
+export { QuizLayout }

@@ -1,3 +1,3 @@
-import {setOnLocalStorage, getOnLocalStorage} from './localStorage'
+import { setOnLocalStorage, getOnLocalStorage } from './localStorage'
 
-export {setOnLocalStorage, getOnLocalStorage}
+export { setOnLocalStorage, getOnLocalStorage }
