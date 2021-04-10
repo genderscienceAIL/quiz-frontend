@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     padding: '4px',
     borderRadius: '5px',
     backgroundColor: '#2a9d8f',
+    minHeight: '500px',
   },
 })
 

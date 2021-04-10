@@ -4,7 +4,7 @@ import { useQuestionDispatch, useQuestionState } from '../context'
 import axios from 'axios'
 
 import { key } from '../config'
-import { getOnLocalStorage } from '../utils'
+import { getOnLocalStorage, timeout } from '../utils'
 
 const useStyles = makeStyles({
   button: {
@@ -24,6 +24,7 @@ const NextQuestionButton = () => {
   const { currentQuestionId, selectedAnswer } = useQuestionState()
 
   const getNextQuestion = async () => {
+    dispatch({ type: 'updateAnimations', payload: false })
     const result = await axios.get(
       `http://localhost:3000/nextQuestion/${currentQuestionId}/${selectedAnswer}`,
       {
@@ -32,7 +33,9 @@ const NextQuestionButton = () => {
         },
       }
     )
+    await timeout(1000)
     dispatch({ type: 'nextQuestion', payload: result.data })
+    dispatch({ type: 'updateAnimations', payload: true })
   }
 
   return (

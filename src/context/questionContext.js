@@ -11,6 +11,7 @@ const QuestionReducer = (state, action) => {
         currentQuestion: state.currentQuestion,
         currentAnswers: state.currentAnswers,
         selectedAnswer: action.payload,
+        showAnimations: state.showAnimations,
         status: state.status,
         error: state.error,
       }
@@ -21,6 +22,7 @@ const QuestionReducer = (state, action) => {
         currentQuestion: action.payload.question,
         currentAnswers: action.payload.answers,
         selectedAnswer: state.selectedAnswer,
+        showAnimations: state.showAnimations,
         status: state.status,
         error: state.error,
       }
@@ -31,6 +33,18 @@ const QuestionReducer = (state, action) => {
         currentQuestion: action.payload.question,
         currentAnswers: action.payload.answers,
         selectedAnswer: state.selectedAnswer,
+        showAnimations: state.showAnimations,
+        status: state.status,
+        error: state.error,
+      }
+    }
+    case 'updateAnimations': {
+      return {
+        currentQuestionId: state.currentQuestionId,
+        currentQuestion: state.currentQuestion,
+        currentAnswers: state.currentAnswers,
+        selectedAnswer: state.selectedAnswer,
+        showAnimations: action.payload,
         status: state.status,
         error: state.error,
       }
@@ -47,6 +61,7 @@ const QuestionProvider = ({ children }) => {
     currentQuestion: undefined,
     currentAnswers: undefined,
     selectedAnswer: undefined,
+    showAnimations: true,
     status: '',
     error: '',
   })

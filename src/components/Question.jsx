@@ -5,10 +5,12 @@ import { useEffect } from 'react'
 import { key } from '../config'
 import { getOnLocalStorage } from '../utils'
 import { useQuestionDispatch, useQuestionState } from '../context'
+import { FadeIn, FadeOut } from './animation'
 
 const Question = () => {
-  const { currentQuestion } = useQuestionState()
+  const { currentQuestion, showAnimations } = useQuestionState()
   const dispatch = useQuestionDispatch()
+  const Animation = showAnimations ? FadeIn : FadeOut
 
   useEffect(() => {
     axios
@@ -25,7 +27,7 @@ const Question = () => {
 
   return (
     <Grid item xs={12}>
-      <p>{currentQuestion}</p>
+      <Animation>{currentQuestion}</Animation>
     </Grid>
   )
 }
