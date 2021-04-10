@@ -12,10 +12,7 @@ const fadeOut = keyframes`
 }`
 
 const FadeOut = styled.div`
-  display: inline-block;
   animation: ${fadeOut} 1s linear;
-  padding: 2rem 1rem;
-  font-size: 1.2rem;
   opacity: 0;
 `
 
