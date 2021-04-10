@@ -7,46 +7,30 @@ const QuestionReducer = (state, action) => {
   switch (action.type) {
     case 'changeSelectedAnswer': {
       return {
-        currentQuestionId: state.currentQuestionId,
-        currentQuestion: state.currentQuestion,
-        currentAnswers: state.currentAnswers,
+        ...state,
         selectedAnswer: action.payload,
-        showAnimations: state.showAnimations,
-        status: state.status,
-        error: state.error,
       }
     }
     case 'nextQuestion': {
       return {
+        ...state,
         currentQuestionId: action.payload._id,
         currentQuestion: action.payload.question,
         currentAnswers: action.payload.answers,
-        selectedAnswer: state.selectedAnswer,
-        showAnimations: state.showAnimations,
-        status: state.status,
-        error: state.error,
       }
     }
     case 'updateCurrentQuestion': {
       return {
+        ...state,
         currentQuestionId: action.payload._id,
         currentQuestion: action.payload.question,
         currentAnswers: action.payload.answers,
-        selectedAnswer: state.selectedAnswer,
-        showAnimations: state.showAnimations,
-        status: state.status,
-        error: state.error,
       }
     }
     case 'updateAnimations': {
       return {
-        currentQuestionId: state.currentQuestionId,
-        currentQuestion: state.currentQuestion,
-        currentAnswers: state.currentAnswers,
-        selectedAnswer: state.selectedAnswer,
+        ...state,
         showAnimations: action.payload,
-        status: state.status,
-        error: state.error,
       }
     }
     default: {
