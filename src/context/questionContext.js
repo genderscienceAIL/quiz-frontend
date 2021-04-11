@@ -17,6 +17,8 @@ const QuestionReducer = (state, action) => {
         currentQuestionId: action.payload._id,
         currentQuestion: action.payload.question,
         currentAnswers: action.payload.answers,
+        selectedAnswer: undefined,
+        answerInfo: action.payload.answerInfo,
       }
     }
     case 'updateCurrentQuestion': {
@@ -25,6 +27,7 @@ const QuestionReducer = (state, action) => {
         currentQuestionId: action.payload._id,
         currentQuestion: action.payload.question,
         currentAnswers: action.payload.answers,
+        answerInfo: action.payload.answerInfo,
       }
     }
     case 'updateAnimations': {
@@ -46,6 +49,7 @@ const QuestionProvider = ({ children }) => {
     currentAnswers: undefined,
     selectedAnswer: undefined,
     showAnimations: true,
+    answerInfo: undefined,
     status: '',
     error: '',
   })

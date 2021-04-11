@@ -1,13 +1,15 @@
 import Grid from '@material-ui/core/Grid'
-import Radio from '@material-ui/core/Radio'
-import TextField from '@material-ui/core/TextField'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-
 import { useQuestionState, useQuestionDispatch } from '../context'
 import { FadeIn, FadeOut } from './animation'
+import AnswerInput from './AnswerInput'
 
 const Answers = () => {
-  const { selectedAnswer, currentAnswers, showAnimations } = useQuestionState()
+  const {
+    selectedAnswer,
+    currentAnswers,
+    showAnimations,
+    answerInfo,
+  } = useQuestionState()
   const dispatch = useQuestionDispatch()
   const Animation = showAnimations ? FadeIn : FadeOut
 
@@ -18,31 +20,26 @@ const Answers = () => {
   return (
     <>
       {currentAnswers && currentAnswers.length !== 0 ? (
-        currentAnswers.map((item, key) => (
-          <Grid key={key} item xs={12} sm={6}>
+        currentAnswers.map((item, index) => (
+          <Grid key={index} item xs={12} sm={6}>
             <Animation>
-              <FormControlLabel
-                value={item}
-                control={
-                  <Radio
-                    checked={selectedAnswer === item}
-                    onChange={handleChange}
-                  />
-                }
-                label={item}
+              <AnswerInput
+                index={index}
+                answerValue={item}
+                selectedAnswer={selectedAnswer ? selectedAnswer : ''}
+                answerInfo={answerInfo ? answerInfo : {}}
+                handleChange={handleChange}
               />
             </Animation>
           </Grid>
         ))
       ) : (
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12}>
           <Animation>
-            <TextField
-              id="outlined-multiline-static"
-              label="Answer"
-              multiline
-              rows={4}
-              variant="outlined"
+            <AnswerInput
+              selectedAnswer={selectedAnswer ? selectedAnswer : ''}
+              answerInfo={answerInfo ? answerInfo : {}}
+              handleChange={handleChange}
             />
           </Animation>
         </Grid>
