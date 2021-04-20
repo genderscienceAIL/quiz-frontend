@@ -7,6 +7,14 @@ import { getOnLocalStorage } from '../utils'
 import { useQuestionDispatch, useQuestionState } from '../context'
 import { FadeIn, FadeOut } from './animation'
 
+const NewlineText = (props) => {
+  const { text } = props
+  if (!text) return null
+  const newText = text.split('\n').map((str, key) => <p key={key}>{str}</p>)
+
+  return newText
+}
+
 const Question = () => {
   const { currentQuestion, showAnimations } = useQuestionState()
   const dispatch = useQuestionDispatch()
@@ -27,7 +35,9 @@ const Question = () => {
 
   return (
     <Grid item xs={12}>
-      <Animation>{currentQuestion}</Animation>
+      <Animation>
+        <NewlineText text={currentQuestion} />
+      </Animation>
     </Grid>
   )
 }
