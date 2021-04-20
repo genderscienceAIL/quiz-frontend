@@ -8,13 +8,19 @@ import { getOnLocalStorage, timeout } from '../utils'
 
 const useStyles = makeStyles({
   button: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    background: '#70988c',
     border: 0,
     borderRadius: 3,
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    color: 'white',
-    height: 48,
+    color: '#fcf4ec',
+    width: 30,
+    height: 30,
     padding: '0 30px',
+    fontSize: '12px',
+    fontFamily: ['Raleway', 'sans-serif'],
+    '&:hover': {
+      background: '#3c2b42',
+    },
   },
 })
 
