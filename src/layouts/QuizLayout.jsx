@@ -8,8 +8,8 @@ const useStyles = makeStyles({
     maxWidth: '630px',
     padding: '4px',
     borderRadius: '5px',
-    backgroundColor: '#fcf4ec',
-    fontFamily: ['Raleway', 'sans-serif'],
+    backgroundColor: '#fbf6fc',
+    fontFamily: ['Monserrat', 'sans-serif'],
   },
   logo: {
     width: '25%',
