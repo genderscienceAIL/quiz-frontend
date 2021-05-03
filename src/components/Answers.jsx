@@ -18,7 +18,7 @@ const Answers = () => {
     dispatch({ type: 'changeSelectedAnswer', payload: event.target.value })
   }
 
-  if (status !== 'Quiz' || (currentAnswers && currentAnswers.length === 0)) {
+  if (status !== 'Quiz') {
     return null
   }
 
