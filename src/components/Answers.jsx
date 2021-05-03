@@ -9,12 +9,17 @@ const Answers = () => {
     currentAnswers,
     showAnimations,
     answerInfo,
+    status,
   } = useQuestionState()
   const dispatch = useQuestionDispatch()
   const Animation = showAnimations ? FadeIn : FadeOut
 
   const handleChange = (event) => {
     dispatch({ type: 'changeSelectedAnswer', payload: event.target.value })
+  }
+
+  if (status !== 'Quiz' || (currentAnswers && currentAnswers.length === 0)) {
+    return null
   }
 
   return (

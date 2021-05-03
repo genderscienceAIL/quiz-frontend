@@ -23,14 +23,20 @@ const NextQuestionButton = () => {
   const [isLoading, setIsLoading] = useState(false)
   const classes = useStyles()
   const dispatch = useQuestionDispatch()
-  const { currentQuestionId, selectedAnswer } = useQuestionState()
+  const { currentQuestionId, selectedAnswer, status } = useQuestionState()
 
   const getNextQuestion = async () => {
     if (
       selectedAnswer ===
       'I do not wish to participate in the study neither to take the self-assessment questionnaire'
     ) {
-      alert('Ve a otra web')
+      dispatch({ type: 'updateAnimations', payload: false })
+      await timeout(1000)
+      dispatch({
+        type: 'NoConsentMsg',
+        payload: 'NoConsentMsg',
+      })
+      dispatch({ type: 'updateAnimations', payload: true })
     } else {
       setIsLoading(true)
       dispatch({ type: 'updateAnimations', payload: false })
@@ -49,7 +55,9 @@ const NextQuestionButton = () => {
     }
   }
 
-  console.log(selectedAnswer)
+  if (status !== 'Quiz') {
+    return null
+  }
 
   return (
     <Button

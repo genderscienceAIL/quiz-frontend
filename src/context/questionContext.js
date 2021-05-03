@@ -36,6 +36,12 @@ const QuestionReducer = (state, action) => {
         showAnimations: action.payload,
       }
     }
+    case 'NoConsentMsg': {
+      return {
+        ...state,
+        status: action.payload,
+      }
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`)
     }
@@ -50,7 +56,7 @@ const QuestionProvider = ({ children }) => {
     selectedAnswer: undefined,
     showAnimations: true,
     answerInfo: undefined,
-    status: '',
+    status: 'Quiz',
     error: '',
   })
 

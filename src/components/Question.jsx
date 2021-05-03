@@ -6,17 +6,10 @@ import { key } from '../config'
 import { getOnLocalStorage } from '../utils'
 import { useQuestionDispatch, useQuestionState } from '../context'
 import { FadeIn, FadeOut } from './animation'
-
-const NewlineText = (props) => {
-  const { text } = props
-  if (!text) return null
-  const newText = text.split('\n').map((str, key) => <p key={key}>{str}</p>)
-
-  return newText
-}
+import { NewLineText } from './common'
 
 const Question = () => {
-  const { currentQuestion, showAnimations } = useQuestionState()
+  const { currentQuestion, showAnimations, status } = useQuestionState()
   const dispatch = useQuestionDispatch()
   const Animation = showAnimations ? FadeIn : FadeOut
 
@@ -33,10 +26,14 @@ const Question = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  if (status !== 'Quiz') {
+    return null
+  }
+
   return (
     <Grid item xs={12}>
       <Animation>
-        <NewlineText text={currentQuestion} />
+        <NewLineText text={currentQuestion} />
       </Animation>
     </Grid>
   )

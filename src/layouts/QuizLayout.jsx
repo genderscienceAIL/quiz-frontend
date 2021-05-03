@@ -1,6 +1,11 @@
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
-import { Question, Answers, NextQuestionButton } from '../components'
+import {
+  Question,
+  Answers,
+  NextQuestionButton,
+  NoConsentMsg,
+} from '../components'
 
 const useStyles = makeStyles({
   container: {
@@ -16,6 +21,9 @@ const QuizLayout = () => {
 
   return (
     <Grid container spacing={3} className={classes.container}>
+      <Grid container item>
+        <NoConsentMsg />
+      </Grid>
       <Grid container item>
         <Question />
       </Grid>
