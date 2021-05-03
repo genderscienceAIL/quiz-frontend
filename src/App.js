@@ -9,7 +9,7 @@ import { QuestionProvider } from './context'
 const useStyles = makeStyles({
   app: {
     height: '100vh',
-    backgroundColor: 'white',
+    backgroundColor: '#3c2b42',
   },
   main: {
     display: 'flex',
