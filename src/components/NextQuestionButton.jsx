@@ -50,7 +50,7 @@ const NextQuestionButton = () => {
       setIsLoading(true)
       dispatch({ type: 'updateAnimations', payload: false })
       const { data } = await axios.get(
-        `http://localhost:3000/nextQuestion/${currentQuestionId}/${selectedAnswer}`,
+        `https://backend-test-q5kd.onrender.com/nextQuestion/${currentQuestionId}/${selectedAnswer}`,
         {
           headers: {
             Authorization: token,

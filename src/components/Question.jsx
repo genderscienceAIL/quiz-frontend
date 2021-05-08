@@ -14,7 +14,7 @@ const Question = () => {
     const getFirstQuiz = async () => {
       console.log('Question!')
       const { data } = await axios.get(
-        'http://localhost:3000/quiz/First quiz',
+        'https://backend-test-q5kd.onrender.com/quiz/First quiz',
         {
           headers: {
             Authorization: token,

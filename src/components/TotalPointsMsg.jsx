@@ -150,11 +150,14 @@ const TotalPointsMsg = () => {
 
   useEffect(() => {
     const getTotalPoints = async () => {
-      const { data } = await axios.get('http://localhost:3000/getTotalPoints', {
-        headers: {
-          Authorization: token,
-        },
-      })
+      const { data } = await axios.get(
+        'https://backend-test-q5kd.onrender.com/getTotalPoints',
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      )
 
       setPoints(data.total_points)
     }
