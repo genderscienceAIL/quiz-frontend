@@ -1,5 +1,8 @@
+import { useEffect } from 'react'
+import axios from 'axios'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
+import { useQuestionDispatch } from '../context'
 import {
   Question,
   Answers,
@@ -26,6 +29,18 @@ const useStyles = makeStyles({
 
 const QuizLayout = () => {
   const classes = useStyles()
+  const dispatch = useQuestionDispatch()
+
+  useEffect(() => {
+    const getToken = async () => {
+      const { data: token } = await axios.get('http://localhost:3000/getToken')
+      dispatch({ type: 'updateToken', payload: token })
+      // await setOnLocalStorage(key.token, token)
+    }
+
+    getToken()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <Grid container spacing={3} className={classes.container}>

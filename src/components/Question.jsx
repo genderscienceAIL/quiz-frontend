@@ -1,30 +1,34 @@
 import Grid from '@material-ui/core/Grid'
 import axios from 'axios'
 import { useEffect } from 'react'
-
-import { key } from '../config'
-import { getOnLocalStorage } from '../utils'
 import { useQuestionDispatch, useQuestionState } from '../context'
 import { FadeIn, FadeOut } from './animation'
 import { NewLineText } from './common'
 
 const Question = () => {
-  const { currentQuestion, showAnimations, status } = useQuestionState()
+  const { currentQuestion, showAnimations, status, token } = useQuestionState()
   const dispatch = useQuestionDispatch()
   const Animation = showAnimations ? FadeIn : FadeOut
 
   useEffect(() => {
-    axios
-      .get('http://localhost:3000/quiz/First quiz', {
-        headers: {
-          Authorization: getOnLocalStorage(key.token),
-        },
-      })
-      .then((res) => {
-        dispatch({ type: 'updateCurrentQuestion', payload: res.data })
-      })
+    const getFirstQuiz = async () => {
+      console.log('Question!')
+      const { data } = await axios.get(
+        'http://localhost:3000/quiz/First quiz',
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      )
+
+      dispatch({ type: 'updateCurrentQuestion', payload: data })
+    }
+
+    getFirstQuiz()
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [token])
 
   if (status !== 'Quiz') {
     return null

@@ -4,6 +4,7 @@ const QuestionStateContext = createContext()
 const QuestionDispatchContext = createContext()
 
 const QuestionReducer = (state, action) => {
+  console.log(action.type)
   switch (action.type) {
     case 'changeSelectedAnswer': {
       return {
@@ -36,11 +37,16 @@ const QuestionReducer = (state, action) => {
         showAnimations: action.payload,
       }
     }
-
     case 'changeStatus': {
       return {
         ...state,
         status: action.payload,
+      }
+    }
+    case 'updateToken': {
+      return {
+        ...state,
+        token: action.payload,
       }
     }
     default: {
@@ -58,6 +64,7 @@ const QuestionProvider = ({ children }) => {
     showAnimations: true,
     answerInfo: undefined,
     status: 'Quiz',
+    token: undefined,
     error: '',
   })
 

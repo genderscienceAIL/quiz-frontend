@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Grid from '@material-ui/core/Grid'
-import Link from '@material-ui/core/Link'
 import { FadeIn, FadeOut } from './animation'
 import { useQuestionState } from '../context'
-import { NewLineText } from './common'
-import { key } from '../config'
-import { getOnLocalStorage } from '../utils'
 
 const MsgBasic = () => {
   return (
@@ -148,7 +144,7 @@ const MsgAdvance = () => {
   )
 }
 const TotalPointsMsg = () => {
-  const { showAnimations, status } = useQuestionState()
+  const { showAnimations, status, token } = useQuestionState()
   const [points, setPoints] = useState(undefined)
   const Animation = showAnimations ? FadeIn : FadeOut
 
@@ -156,7 +152,7 @@ const TotalPointsMsg = () => {
     const getTotalPoints = async () => {
       const { data } = await axios.get('http://localhost:3000/getTotalPoints', {
         headers: {
-          Authorization: getOnLocalStorage(key.token),
+          Authorization: token,
         },
       })
 
@@ -164,7 +160,7 @@ const TotalPointsMsg = () => {
     }
 
     getTotalPoints()
-  }, [status])
+  }, [token])
 
   if (status !== 'TotalPointsMsg') {
     return null
