@@ -5,6 +5,7 @@ import {
   Answers,
   NextQuestionButton,
   NoConsentMsg,
+  TotalPointsMsg,
 } from '../components'
 import Logo from '../images/limnoedu.png'
 
@@ -34,6 +35,9 @@ const QuizLayout = () => {
         title="Logo gender LimnoEdu"
         alt="Logo gender LimnoEdu"
       />
+      <Grid container item>
+        <TotalPointsMsg />
+      </Grid>
       <Grid container item>
         <NoConsentMsg />
       </Grid>

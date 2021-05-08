@@ -36,7 +36,8 @@ const QuestionReducer = (state, action) => {
         showAnimations: action.payload,
       }
     }
-    case 'NoConsentMsg': {
+
+    case 'changeStatus': {
       return {
         ...state,
         status: action.payload,

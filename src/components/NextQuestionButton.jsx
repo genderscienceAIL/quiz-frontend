@@ -39,14 +39,14 @@ const NextQuestionButton = () => {
       dispatch({ type: 'updateAnimations', payload: false })
       await timeout(1000)
       dispatch({
-        type: 'NoConsentMsg',
+        type: 'changeStatus',
         payload: 'NoConsentMsg',
       })
       dispatch({ type: 'updateAnimations', payload: true })
     } else {
       setIsLoading(true)
       dispatch({ type: 'updateAnimations', payload: false })
-      const result = await axios.get(
+      const { data } = await axios.get(
         `http://localhost:3000/nextQuestion/${currentQuestionId}/${selectedAnswer}`,
         {
           headers: {
@@ -55,7 +55,12 @@ const NextQuestionButton = () => {
         }
       )
       await timeout(1000)
-      dispatch({ type: 'nextQuestion', payload: result.data })
+
+      if (data.isEndQuiz) {
+        dispatch({ type: 'changeStatus', payload: 'TotalPointsMsg' })
+      } else {
+        dispatch({ type: 'nextQuestion', payload: data })
+      }
       dispatch({ type: 'updateAnimations', payload: true })
       setIsLoading(false)
     }
