@@ -6,7 +6,13 @@ import { FadeIn, FadeOut } from './animation'
 import { NewLineText } from './common'
 
 const Question = () => {
-  const { currentQuestion, showAnimations, status, token } = useQuestionState()
+  const {
+    currentQuestion,
+    currentQuestionInfo,
+    showAnimations,
+    status,
+    token,
+  } = useQuestionState()
   const dispatch = useQuestionDispatch()
   const Animation = showAnimations ? FadeIn : FadeOut
 
@@ -30,6 +36,8 @@ const Question = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token])
 
+  console.log(currentQuestionInfo)
+
   if (status !== 'Quiz') {
     return null
   }
@@ -37,6 +45,7 @@ const Question = () => {
   return (
     <Grid item xs={12}>
       <Animation>
+        {currentQuestionInfo && <span>{currentQuestionInfo}</span>}
         <NewLineText text={currentQuestion} />
       </Animation>
     </Grid>

@@ -4,7 +4,7 @@ const QuestionStateContext = createContext()
 const QuestionDispatchContext = createContext()
 
 const QuestionReducer = (state, action) => {
-  console.log(action.type)
+  console.log(action, 'context')
   switch (action.type) {
     case 'changeSelectedAnswer': {
       return {
@@ -20,6 +20,7 @@ const QuestionReducer = (state, action) => {
         currentAnswers: action.payload.answers,
         selectedAnswer: undefined,
         answerInfo: action.payload.answerInfo,
+        currentQuestionInfo: action.payload.info,
       }
     }
     case 'updateCurrentQuestion': {
@@ -29,6 +30,7 @@ const QuestionReducer = (state, action) => {
         currentQuestion: action.payload.question,
         currentAnswers: action.payload.answers,
         answerInfo: action.payload.answerInfo,
+        currentQuestionInfo: action.payload.info,
       }
     }
     case 'updateAnimations': {
@@ -58,6 +60,7 @@ const QuestionReducer = (state, action) => {
 const QuestionProvider = ({ children }) => {
   const [state, dispatch] = useReducer(QuestionReducer, {
     currentQuestionId: undefined,
+    currentQuestionInfo: undefined,
     currentQuestion: undefined,
     currentAnswers: undefined,
     selectedAnswer: undefined,

@@ -27,12 +27,8 @@ const NextQuestionButton = () => {
   const [isLoading, setIsLoading] = useState(false)
   const classes = useStyles()
   const dispatch = useQuestionDispatch()
-  const {
-    currentQuestionId,
-    selectedAnswer,
-    status,
-    token,
-  } = useQuestionState()
+  const { currentQuestionId, selectedAnswer, status, token } =
+    useQuestionState()
 
   const getNextQuestion = async () => {
     if (

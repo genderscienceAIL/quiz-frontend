@@ -4,6 +4,8 @@ import { QuestionProvider } from './context'
 
 const useStyles = makeStyles({
   app: {
+    overflow: 'scroll',
+    padding: ' 65px 0',
     height: '100vh',
     backgroundColor: '#3c2b42',
   },
@@ -11,7 +13,6 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '100%',
   },
 })
 
