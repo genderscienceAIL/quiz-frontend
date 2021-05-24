@@ -151,7 +151,7 @@ const TotalPointsMsg = () => {
   useEffect(() => {
     const getTotalPoints = async () => {
       const { data } = await axios.get(
-        'https://backend-test-q5kd.onrender.com/getTotalPoints',
+        'https://limno-backend-test.onrender.com/getTotalPoints',
         {
           headers: {
             Authorization: token,

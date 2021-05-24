@@ -34,7 +34,7 @@ const QuizLayout = () => {
   useEffect(() => {
     const getToken = async () => {
       const { data: token } = await axios.get(
-        'https://backend-test-q5kd.onrender.com/getToken'
+        'https://limno-backend-test.onrender.com/getToken'
       )
       dispatch({ type: 'updateToken', payload: token })
       // await setOnLocalStorage(key.token, token)

@@ -46,7 +46,7 @@ const NextQuestionButton = () => {
       setIsLoading(true)
       dispatch({ type: 'updateAnimations', payload: false })
       const { data } = await axios.get(
-        `https://backend-test-q5kd.onrender.com/nextQuestion/${currentQuestionId}/${selectedAnswer}`,
+        `https://limno-backend-test.onrender.com/nextQuestion/${currentQuestionId}/${selectedAnswer}`,
         {
           headers: {
             Authorization: token,

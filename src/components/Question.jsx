@@ -20,7 +20,7 @@ const Question = () => {
     const getFirstQuiz = async () => {
       console.log('Question!')
       const { data } = await axios.get(
-        'https://backend-test-q5kd.onrender.com/quiz/First quiz',
+        'https://limno-backend-test.onrender.com/quiz/First quiz',
         {
           headers: {
             Authorization: token,
