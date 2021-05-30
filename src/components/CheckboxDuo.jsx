@@ -27,7 +27,7 @@ const CheckboxDuo = ({
         <TextField
           fullWidth
           id={`outlined-multiline-static-${index}`}
-          label="free"
+          label="other"
           type="number"
           helperText={helperText}
           value={value}
@@ -46,7 +46,7 @@ const CheckboxDuo = ({
       ) : (
         <TextField
           id={`outlined-multiline-static-${index}`}
-          label="free"
+          label="other"
           multiline
           rowsMax={4}
           helperText={helperText}
