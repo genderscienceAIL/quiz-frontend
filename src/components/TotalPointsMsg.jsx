@@ -163,7 +163,7 @@ const TotalPointsMsg = () => {
     }
 
     getTotalPoints()
-  }, [token])
+  }, [token, status])
 
   if (status !== 'TotalPointsMsg') {
     return null
