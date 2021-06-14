@@ -4,7 +4,6 @@ const QuestionStateContext = createContext()
 const QuestionDispatchContext = createContext()
 
 const QuestionReducer = (state, action) => {
-  console.log(action, 'context')
   switch (action.type) {
     case 'changeSelectedAnswer': {
       return {

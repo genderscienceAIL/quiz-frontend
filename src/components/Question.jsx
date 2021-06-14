@@ -18,7 +18,6 @@ const Question = () => {
 
   useEffect(() => {
     const getFirstQuiz = async () => {
-      console.log('Question!')
       const { data } = await axios.get(
         'https://limno-backend-test.onrender.com/quiz/First quiz',
         {
@@ -35,8 +34,6 @@ const Question = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token])
-
-  console.log(currentQuestionInfo)
 
   if (status !== 'Quiz') {
     return null
