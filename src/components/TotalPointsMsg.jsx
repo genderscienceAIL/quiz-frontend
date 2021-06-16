@@ -23,22 +23,49 @@ const MsgBasic = () => {
       </p>
       <p>
         We recommend you to start by further understanding how gender-fairness
-        in teaching can positively impact science and society. Take a look at
-        this excellent glossary and content from the EIGI about gender biases.
-        Moreover, we have prepared a set of freely available slides “Her
-        Research in Your Lecture” illustrating the research of scientific women,
-        with special emphasis on freshwater-related sciences. Use them to
-        improve your lectures and be more gender fair in your courses! If you
-        need more general guidance on gender equity and gender-fair practices,
-        you can find inspiration and presentations ready to be used in our
-        “Women in Science” section.
+        in teaching can positively impact science and society. Take a look at{' '}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://eige.europa.eu/thesaurus/overview"
+        >
+          this
+        </a>{' '}
+        excellent glossary and content from the EIGI. Moreover, we have prepared
+        a set of freely available slides “
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.genderlimno.org/her-research-in-your-lecture.html"
+        >
+          Her Research in Your Lecture
+        </a>
+        ” illustrating the research of scientific women, with special emphasis
+        on freshwater-related sciences. Use them to improve your lectures and be
+        more gender fair in your courses! If you are looking for general
+        guidance on gender equity and gender- fair practices, you can find
+        inspiration and presentations ready to be used in our “
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.genderlimno.org/women-in-science.html"
+        >
+          Women in Science” section.
+        </a>
       </p>
       <p>
         Would you like to get information about the results of this project and
         other activities and studies carried out by the Gender & Science AIL
         Group? Please, follow this link and subscribe to our updates (we send
-        less than an e-mail per month). You can also follow us on Twitter. If
-        you have any suggestion about the questionnaire, you may contact{' '}
+        less than an e-mail per month). You can also follow us on{' '}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://twitter.com/genderail"
+        >
+          Twitter
+        </a>
+        . If you have any suggestion about the questionnaire, you may contact{' '}
         <a href="mailto:genderscienceail@gmail.com">
           genderscienceail@gmail.com
         </a>
@@ -71,21 +98,49 @@ const MsgIntermediate = () => {
         gender bias during their evaluation.
       </p>
       <p>
-        Take a look at this excellent glossary and content from the EIGI about
-        gender biases. Moreover, we have prepared a set of freely available
-        slides “Her Research in Your Lecture” illustrating the research of
-        scientific women, with special emphasis on freshwater-related sciences.
-        Use them to improve your lectures and be more gender fair in your
-        courses! If you need more general guidance on gender equity and
-        gender-fair practices, you can find inspiration and presentations ready
-        to be used in our “Women in Science” section.
+        Take a look at{' '}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://eige.europa.eu/thesaurus/overview"
+        >
+          this
+        </a>{' '}
+        excellent glossary and content from the EIGI. Moreover, we have prepared
+        a set of freely available slides “
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.genderlimno.org/her-research-in-your-lecture.html"
+        >
+          Her Research in Your Lecture
+        </a>
+        ” illustrating the research of scientific women, with special emphasis
+        on freshwater-related sciences. Use them to improve your lectures and be
+        more gender fair in your courses! If you are looking for general
+        guidance on gender equity and gender- fair practices, you can find
+        inspiration and presentations ready to be used in our “
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.genderlimno.org/women-in-science.html"
+        >
+          Women in Science” section.
+        </a>
       </p>
       <p>
         Would you like to get information about the results of this project and
         other activities and studies carried out by the Gender & Science AIL
         Group? Please, follow this link and subscribe to our updates (we send
-        less than an e-mail per month). You can also follow us on Twitter. If
-        you have any suggestion about the questionnaire, you may contact{' '}
+        less than an e-mail per month). You can also follow us on{' '}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://twitter.com/genderail"
+        >
+          Twitter
+        </a>
+        . If you have any suggestion about the questionnaire, you may contact{' '}
         <a href="mailto:genderscienceail@gmail.com">
           genderscienceail@gmail.com
         </a>
@@ -115,22 +170,49 @@ const MsgAdvance = () => {
         done!
       </p>
       <p>
-        There is always room to improve! Take a look at this excellent glossary
-        and content from the EIGI. Moreover, we have prepared a set of freely
-        available slides “Her Research in Your Lecture” illustrating the
-        research of scientific women, with special emphasis on
-        freshwater-related sciences. Use them to improve your lectures and be
+        There is always room to improve! Take a look at{' '}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://eige.europa.eu/thesaurus/overview"
+        >
+          this
+        </a>{' '}
+        excellent glossary and content from the EIGI. Moreover, we have prepared
+        a set of freely available slides “
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.genderlimno.org/her-research-in-your-lecture.html"
+        >
+          Her Research in Your Lecture
+        </a>
+        ” illustrating the research of scientific women, with special emphasis
+        on freshwater-related sciences. Use them to improve your lectures and be
         more gender fair in your courses! If you are looking for general
         guidance on gender equity and gender- fair practices, you can find
-        inspiration and presentations ready to be used in our “Women in Science”
-        section.
+        inspiration and presentations ready to be used in our “
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.genderlimno.org/women-in-science.html"
+        >
+          Women in Science” section.
+        </a>
       </p>
       <p>
         Would you like to get information about the results of this project and
         other activities and studies carried out by the Gender & Science AIL
         Group? Please, follow this link and subscribe to our updates (we send
-        less than an e-mail per month). You can also follow us on Twitter. If
-        you have any suggestion about the questionnaire, you may contact{' '}
+        less than an e-mail per month). You can also follow us on{' '}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://twitter.com/genderail"
+        >
+          Twitter
+        </a>
+        . If you have any suggestion about the questionnaire, you may contact{' '}
         <a href="mailto:genderscienceail@gmail.com">
           genderscienceail@gmail.com
         </a>
