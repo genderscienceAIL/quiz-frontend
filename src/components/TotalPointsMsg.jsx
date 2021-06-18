@@ -11,10 +11,13 @@ const MsgBasic = () => {
       <p>
         Regarding the inclusion of the gender perspective in your teaching, your
         level is <b>BASIC</b>. This self-evaluation is a great first step! You
-        can improve by incorporating in your classes resources and concepts that
-        contribute to reducing gender bias and educate empowered scientists. Try
-        to devote time specifically to look for female researchers whose work
-        can be highlighted in your courses and include at least one concept
+        can{' '}
+        <b>
+          improve by incorporating in your classes resources and concepts that
+          contribute to reducing gender bias and educate empowered scientists
+        </b>
+        . Try to devote time specifically to look for female researchers whose
+        work can be highlighted in your courses and include at least one concept
         coined by women in your classes. You can use their full name when
         referring to their work in your presentations or in your reference list.
         You should be aware that considering the composition of your class,
@@ -56,8 +59,16 @@ const MsgBasic = () => {
       <p>
         Would you like to get information about the results of this project and
         other activities and studies carried out by the Gender & Science AIL
-        Group? Please, follow this link and subscribe to our updates (we send
-        less than an e-mail per month). You can also follow us on{' '}
+        Group? Please, follow this{' '}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.genderlimno.org/contact.html"
+        >
+          link
+        </a>{' '}
+        and subscribe to our updates (we send less than an e-mail per month).
+        You can also follow us on{' '}
         <a
           target="_blank"
           rel="noreferrer"
@@ -88,14 +99,18 @@ const MsgIntermediate = () => {
         further. Your level regarding the inclusion of the gender perspective in
         your teaching is <b>INTERMEDIATE</b>. We can give you some tips and
         additional resources and concepts to get to the next level. Devote some
-        time to look for female researchers whose work can be highlighted in
-        your courses, and include some concepts coined by women in your classes.
-        You can contribute to further visualize the scientific contributions of
-        women by providing her full names in the reference list as well as in
-        your presentations. Pay more attention to gender diversity in your
-        class, identify potential differences in participation, and develop
-        strategies to foster the participation of all the students and avoid
-        gender bias during their evaluation.
+        time to{' '}
+        <b>
+          look for female researchers whose work can be highlighted in your
+          courses
+        </b>
+        , and include some concepts coined by women in your classes. You can
+        contribute to further visualize the scientific contributions of women by
+        providing her full names in the reference list as well as in your
+        presentations. Pay more attention to gender diversity in your class,
+        identify potential differences in participation, and develop strategies
+        to foster the participation of all the students and avoid gender bias
+        during their evaluation.
       </p>
       <p>
         Take a look at{' '}
@@ -131,8 +146,16 @@ const MsgIntermediate = () => {
       <p>
         Would you like to get information about the results of this project and
         other activities and studies carried out by the Gender & Science AIL
-        Group? Please, follow this link and subscribe to our updates (we send
-        less than an e-mail per month). You can also follow us on{' '}
+        Group? Please, follow this{' '}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.genderlimno.org/contact.html"
+        >
+          link
+        </a>{' '}
+        and subscribe to our updates (we send less than an e-mail per month).
+        You can also follow us on{' '}
         <a
           target="_blank"
           rel="noreferrer"
@@ -203,8 +226,16 @@ const MsgAdvance = () => {
       <p>
         Would you like to get information about the results of this project and
         other activities and studies carried out by the Gender & Science AIL
-        Group? Please, follow this link and subscribe to our updates (we send
-        less than an e-mail per month). You can also follow us on{' '}
+        Group? Please, follow this{' '}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.genderlimno.org/contact.html"
+        >
+          link
+        </a>{' '}
+        and subscribe to our updates (we send less than an e-mail per month).
+        You can also follow us on{' '}
         <a
           target="_blank"
           rel="noreferrer"
