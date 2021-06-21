@@ -52,12 +52,7 @@ const QuizLayout = () => {
         title="Logo gender LimnoEdu"
         alt="Logo gender LimnoEdu"
       />
-      <Grid container item>
-        <TotalPointsMsg />
-      </Grid>
-      <Grid container item>
-        <NoConsentMsg />
-      </Grid>
+
       <Grid container item>
         <Question />
       </Grid>
@@ -67,6 +62,8 @@ const QuizLayout = () => {
       <Grid container item justify="flex-end">
         <NextQuestionButton />
       </Grid>
+      <TotalPointsMsg />
+      <NoConsentMsg />
     </Grid>
   )
 }

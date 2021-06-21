@@ -286,18 +286,20 @@ const TotalPointsMsg = () => {
   }
 
   return (
-    <Grid item xs={12}>
-      <Animation>
-        {/* <NewLineText text={msg} /> */}
-        <Grid container item xs={12}>
-          {points >= 483 && points <= 948 && <MsgBasic />}
-          {points >= 949 && points <= 1568 && <MsgIntermediate />}
-          {points >= 1569 && points <= 2035 && <MsgAdvance />}
-          {/* <Grid item>
+    <Grid container item>
+      <Grid item xs={12}>
+        <Animation>
+          {/* <NewLineText text={msg} /> */}
+          <Grid container item xs={12}>
+            {points >= 483 && points <= 948 && <MsgBasic />}
+            {points >= 949 && points <= 1568 && <MsgIntermediate />}
+            {points >= 1569 && points <= 2035 && <MsgAdvance />}
+            {/* <Grid item>
             <Link href="https://edu.gender4stem-project.eu/">Link1</Link>
           </Grid> */}
-        </Grid>
-      </Animation>
+          </Grid>
+        </Animation>
+      </Grid>
     </Grid>
   )
 }

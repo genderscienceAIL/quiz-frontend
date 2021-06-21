@@ -58,8 +58,10 @@ const NoConsentMsg = () => {
   }
 
   return (
-    <Grid item xs={12}>
-      <Animation>{msg()}</Animation>
+    <Grid container item>
+      <Grid item xs={12}>
+        <Animation>{msg()}</Animation>
+      </Grid>
     </Grid>
   )
 }
