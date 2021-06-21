@@ -53,8 +53,9 @@ const MsgBasic = () => {
           rel="noreferrer"
           href="https://www.genderlimno.org/women-in-science.html"
         >
-          Women in Science” section.
+          Women in Science
         </a>
+        ” section.
       </p>
       <p>
         Would you like to get information about the results of this project and
@@ -140,8 +141,9 @@ const MsgIntermediate = () => {
           rel="noreferrer"
           href="https://www.genderlimno.org/women-in-science.html"
         >
-          Women in Science” section.
+          Women in Science
         </a>
+        ” section.
       </p>
       <p>
         Would you like to get information about the results of this project and
@@ -220,8 +222,9 @@ const MsgAdvance = () => {
           rel="noreferrer"
           href="https://www.genderlimno.org/women-in-science.html"
         >
-          Women in Science” section.
+          Women in Science
         </a>
+        ” section.
       </p>
       <p>
         Would you like to get information about the results of this project and
