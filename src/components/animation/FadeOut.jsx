@@ -12,7 +12,7 @@ const fadeOut = keyframes`
 }`
 
 const FadeOut = styled.div`
-  animation: ${fadeOut} 1s linear;
+  animation: ${fadeOut} 0.25s linear;
   opacity: 0;
 `
 

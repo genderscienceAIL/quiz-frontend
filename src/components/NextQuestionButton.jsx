@@ -40,7 +40,7 @@ const NextQuestionButton = () => {
       'I do not wish to participate in the study neither to take the self-assessment questionnaire'
     ) {
       dispatch({ type: 'updateAnimations', payload: false })
-      await timeout(1000)
+      await timeout(250)
       dispatch({
         type: 'changeStatus',
         payload: 'NoConsentMsg',
@@ -57,7 +57,7 @@ const NextQuestionButton = () => {
           },
         }
       )
-      await timeout(1000)
+      await timeout(250)
 
       if (data.isEndQuiz) {
         dispatch({ type: 'changeStatus', payload: 'TotalPointsMsg' })
