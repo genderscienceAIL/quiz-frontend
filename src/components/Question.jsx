@@ -40,11 +40,13 @@ const Question = () => {
   }
 
   return (
-    <Grid item xs={12}>
-      <Animation>
-        {currentQuestionInfo && <span>{currentQuestionInfo}</span>}
-        <NewLineText text={currentQuestion} />
-      </Animation>
+    <Grid container item>
+      <Grid item xs={12}>
+        <Animation>
+          {currentQuestionInfo && <span>{currentQuestionInfo}</span>}
+          <NewLineText text={currentQuestion} />
+        </Animation>
+      </Grid>
     </Grid>
   )
 }

@@ -53,17 +53,12 @@ const QuizLayout = () => {
         alt="Logo gender LimnoEdu"
       />
 
-      <Grid container item>
-        <Question />
-      </Grid>
-      <Grid container item spacing={3}>
-        <Answers />
-      </Grid>
-      <Grid container item justify="flex-end">
-        <NextQuestionButton />
-      </Grid>
-      <TotalPointsMsg />
+      <Question />
+
+      <Answers />
+      <NextQuestionButton />
       <NoConsentMsg />
+      <TotalPointsMsg />
     </Grid>
   )
 }

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import { useQuestionDispatch, useQuestionState } from '../context'
+import Grid from '@material-ui/core/Grid'
 import axios from 'axios'
 import { timeout } from '../utils'
 
@@ -74,13 +75,15 @@ const NextQuestionButton = () => {
   }
 
   return (
-    <Button
-      disabled={selectedAnswer && !isLoading ? false : true}
-      onClick={() => getNextQuestion()}
-      className={classes.button}
-    >
-      Next
-    </Button>
+    <Grid container item justify="flex-end">
+      <Button
+        disabled={selectedAnswer && !isLoading ? false : true}
+        onClick={() => getNextQuestion()}
+        className={classes.button}
+      >
+        Next
+      </Button>
+    </Grid>
   )
 }
 

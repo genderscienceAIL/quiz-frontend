@@ -23,7 +23,7 @@ const Answers = () => {
   }
 
   return (
-    <>
+    <Grid container item spacing={3}>
       {currentAnswers && currentAnswers.length !== 0 ? (
         currentAnswers.map((item, index) => (
           <Grid key={index} item xs={12} sm={6}>
@@ -49,7 +49,7 @@ const Answers = () => {
           </Animation>
         </Grid>
       )}
-    </>
+    </Grid>
   )
 }
 

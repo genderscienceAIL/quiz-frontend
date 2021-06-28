@@ -1,16 +1,14 @@
 import Grid from '@material-ui/core/Grid'
-import Link from '@material-ui/core/Link'
 import { FadeIn, FadeOut } from './animation'
 import { useQuestionState } from '../context'
-import { NewLineText } from './common'
 
 const msg = () => {
   return (
     <>
-      <p>
+      <span>
         Thank you for considering participating in this study. We encourage you
         to come back and respond to the questionnaire later.
-      </p>
+      </span>
       <p>
         The lack of female role models and the persistent use of gendered and
         stereotyped language holds female students back from pursuing a career
@@ -59,9 +57,7 @@ const NoConsentMsg = () => {
 
   return (
     <Grid container item>
-      <Grid item xs={12}>
-        <Animation>{msg()}</Animation>
-      </Grid>
+      <Animation>{msg()}</Animation>
     </Grid>
   )
 }

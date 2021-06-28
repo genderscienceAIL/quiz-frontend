@@ -7,7 +7,7 @@ import { useQuestionState } from '../context'
 const MsgBasic = () => {
   return (
     <>
-      <p>Thank you for taking this self-evaluation questionnaire.</p>
+      <span>Thank you for taking this self-evaluation questionnaire.</span>
       <p>
         Regarding the inclusion of the gender perspective in your teaching, your
         level is <b>BASIC</b>. This self-evaluation is a great first step! You
@@ -94,7 +94,7 @@ const MsgBasic = () => {
 const MsgIntermediate = () => {
   return (
     <>
-      <p>Thank you for taking this self-evaluation questionnaire.</p>
+      <span>Thank you for taking this self-evaluation questionnaire.</span>
       <p>
         You are certainly on the right path, but it’s time to move one step
         further. Your level regarding the inclusion of the gender perspective in
@@ -182,7 +182,7 @@ const MsgIntermediate = () => {
 const MsgAdvance = () => {
   return (
     <>
-      <p>Thank you for taking this self-evaluation questionnaire.</p>
+      <span>Thank you for taking this self-evaluation questionnaire.</span>
       <p>
         Congratulations! You are already working for the inclusion of the gender
         perspective on your teaching. Your level is <b>ADVANCED</b>. You are
