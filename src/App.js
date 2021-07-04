@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { makeStyles } from '@material-ui/core/styles'
+import { QuizLayout } from './layouts'
+import { QuestionProvider } from './context'
 
-function App() {
+const useStyles = makeStyles({
+  app: {
+    overflow: 'scroll',
+    padding: ' 65px 0',
+    height: '100vh',
+    backgroundColor: '#3c2b42',
+  },
+  main: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+})
+
+const App = () => {
+  const classes = useStyles()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <QuestionProvider>
+      <div className={classes.app}>
+        <header></header>
+        <main className={classes.main}>
+          <QuizLayout />
+        </main>
+      </div>
+    </QuestionProvider>
+  )
 }
 
-export default App;
+export default App
