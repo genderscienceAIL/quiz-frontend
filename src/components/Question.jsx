@@ -19,7 +19,7 @@ const Question = () => {
   useEffect(() => {
     const getFirstQuiz = async () => {
       const { data } = await axios.get(
-        'https://limno-backend-test.onrender.com/quiz/First quiz',
+        'https://backend-m4dz.onrender.com/quiz/First quiz',
         {
           headers: {
             Authorization: token,

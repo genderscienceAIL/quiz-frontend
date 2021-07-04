@@ -28,12 +28,8 @@ const NextQuestionButton = () => {
   const [isLoading, setIsLoading] = useState(false)
   const classes = useStyles()
   const dispatch = useQuestionDispatch()
-  const {
-    currentQuestionId,
-    selectedAnswer,
-    status,
-    token,
-  } = useQuestionState()
+  const { currentQuestionId, selectedAnswer, status, token } =
+    useQuestionState()
 
   const getNextQuestion = async () => {
     if (
@@ -51,7 +47,7 @@ const NextQuestionButton = () => {
       setIsLoading(true)
       dispatch({ type: 'updateAnimations', payload: false })
       const { data } = await axios.get(
-        `https://limno-backend-test.onrender.com/nextQuestion/${currentQuestionId}/${selectedAnswer}`,
+        `https://backend-m4dz.onrender.com/nextQuestion/${currentQuestionId}/${selectedAnswer}`,
         {
           headers: {
             Authorization: token,
