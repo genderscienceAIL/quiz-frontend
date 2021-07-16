@@ -18,20 +18,21 @@ const Question = () => {
 
   useEffect(() => {
     const getFirstQuiz = async () => {
-      const { data } = await axios.get(
-        'https://backend-m4dz.onrender.com/quiz/First quiz',
-        {
-          headers: {
-            Authorization: token,
-          },
-        }
-      )
+      if (token) {
+        const { data } = await axios.get(
+          'https://backend-m4dz.onrender.com/quiz/First quiz',
+          {
+            headers: {
+              Authorization: token,
+            },
+          }
+        )
 
-      dispatch({ type: 'updateCurrentQuestion', payload: data })
+        dispatch({ type: 'updateCurrentQuestion', payload: data })
+      }
+
+      getFirstQuiz()
     }
-
-    getFirstQuiz()
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token])
 
