@@ -265,20 +265,22 @@ const TotalPointsMsg = () => {
   const Animation = showAnimations ? FadeIn : FadeOut
 
   useEffect(() => {
-    const getTotalPoints = async () => {
-      const { data } = await axios.get(
-        'https://backend-m4dz.onrender.com/getTotalPoints',
-        {
-          headers: {
-            Authorization: token,
-          },
-        }
-      )
+    if (token) {
+      const getTotalPoints = async () => {
+        const { data } = await axios.get(
+          'https://backend-m4dz.onrender.com/getTotalPoints',
+          {
+            headers: {
+              Authorization: token,
+            },
+          }
+        )
 
-      setPoints(data.total_points)
+        setPoints(data.total_points)
+      }
+
+      getTotalPoints()
     }
-
-    getTotalPoints()
   }, [token, status])
 
   if (status !== 'TotalPointsMsg') {
