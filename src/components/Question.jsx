@@ -17,8 +17,8 @@ const Question = () => {
   const Animation = showAnimations ? FadeIn : FadeOut
 
   useEffect(() => {
-    const getFirstQuiz = async () => {
-      if (token) {
+    if (token) {
+      const getFirstQuiz = async () => {
         const { data } = await axios.get(
           'https://backend-m4dz.onrender.com/quiz/First quiz',
           {
@@ -30,7 +30,6 @@ const Question = () => {
 
         dispatch({ type: 'updateCurrentQuestion', payload: data })
       }
-
       getFirstQuiz()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
