@@ -20,7 +20,7 @@ const Question = () => {
     if (token) {
       const getFirstQuiz = async () => {
         const { data } = await axios.get(
-          'https://backend-m4dz.onrender.com/quiz/First quiz',
+          'https://backend-ubbc.onrender.com/quiz/First quiz',
           {
             headers: {
               Authorization: token,
