@@ -47,7 +47,7 @@ const NextQuestionButton = () => {
       setIsLoading(true)
       dispatch({ type: 'updateAnimations', payload: false })
       const { data } = await axios.get(
-        `https://backend-m4dz.onrender.com/nextQuestion/${currentQuestionId}/${selectedAnswer}`,
+        `https://backend-ubbc.onrender.com/nextQuestion/${currentQuestionId}/${selectedAnswer}`,
         {
           headers: {
             Authorization: token,
